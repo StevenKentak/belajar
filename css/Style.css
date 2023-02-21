@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #080e16;
+  overflow-x: hidden;
+}
+
+/* navbar */
+
+nav {
+  position: fixed;
+  display: flex;
+  background: #272e42;
+  justify-content: space-around;
+  height: 58px;
+  width: 100%;
+  align-items: center;
+}
+.container .judul {
+  color: #a3b1ee;
+  font-family: "Dancing Script", cursive;
+  text-decoration: none;
+  font-size: 2.2em;
+  text-shadow: 0 0 10px;
+}
+.container .judul:hover {
+  font-size: 2.2em;
+  color: aliceblue;
+  text-shadow: 1px 1px 2px rgb(1, 162, 255), 0 0 28px rgb(0, 119, 255), 0 0 8px rgb(0, 110, 255);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 30%;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: 800;
+}
+nav ul li a {
+  color: #b7c1eb;
+  text-decoration: none;
+  transition: 0.2s;
+}
+nav ul li a:hover {
+  font-size: 1em;
+  font-weight: 700;
+  color: aliceblue;
+  text-shadow: 2px 2px 3px rgb(1, 162, 255), 0 0 28px rgb(0, 119, 255), 0 0 8px rgb(0, 110, 255);
+}
+/* toggle menu */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #a3b1ee;
+  border-radius: 4px;
+  transition: all 0.8s;
+}
+/* animation toggle 
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+} */
+
+/* kartu nama */
+
+.hero {
+  background: linear-gradient(to bottom, #030020, rgba(4, 22, 43, 0.692)), url(../img/bgk.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: #a3b1ee;
+  display: flex;
+  align-items: center;
+}
+.hero .display {
+  padding: 20px;
+  margin: auto;
+  background-color: #050a1bb9;
+  max-width: 350px;
+  text-align: center;
+  border-radius: 40px;
+}
+.hero .display img {
+  margin-top: 40px;
+  border: 10px solid #607adb;
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border-radius: 100%;
+}
+.hero .display h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: "Dancing Script", cursive;
+}
+.hero .display h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+.hero .display .sosmed a {
+  margin: 20px 5px;
+  color: #607adb;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #607adb;
+  border-radius: 100%;
+  width: 44px;
+  height: 44px;
+  line-height: 45px;
+  font-size: 1.7em;
+  transition: 0.4s;
+}
+.hero .display .sosmed a:hover {
+  color: #050a1b;
+  background-color: #a3b1ee;
+}
+/* about me */
+
+.judul-about,
+.judul-project,
+.judul-contact {
+  font-size: calc(1rem + 0.5vw);
+  margin: 20px;
+  text-align: center;
+  color: #607adb;
+}
+.about {
+  height: auto;
+  padding-top: 55px;
+  margin: 15px;
+}
+.about .row .col .saya {
+  width: 35vw;
+  height: auto;
+}
+.about .row {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 30px 120px 30px 120px;
+}
+.about .row .col {
+  padding-right: 15px;
+}
+.about .row .col2 {
+  color: #b7c1eb;
+}
+/* portfolio */
+
+.project {
+  padding-top: 55px;
+  margin: 15px;
+  height: auto;
+  text-align: center;
+  color: #b7c1eb;
+}
+.col-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.column {
+  flex: 33.33%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.pic img {
+  width: 300px;
+  height: auto;
+}
+.column .button {
+  text-decoration: none;
+  margin: 10px;
+  color: #607adb;
+}
+/* contact */
+.judul-contact {
+  padding-top: 65px;
+}
+.row-contact {
+  display: flex;
+  margin: 20px;
+  background: linear-gradient(to left top, #04011d, rgba(1, 38, 80, 0.281)), url(../img/id.png);
+  background-size: cover;
+  border-radius: 15px;
+}
+.row-contact .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.row-contact form {
+  flex: 1 1 45rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.row-contact form .input {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+}
+
+.row-contact form .input i {
+  font-size: 35px;
+  color: #607adb;
+  padding-right: 20px;
+}
+.row-contact form .input input {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  background: none;
+  color: aliceblue;
+  border-radius: 15px;
+}
+.row-contact form .input textarea {
+  height: 120px;
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  background: none;
+  font-family: "Poppins", sans-serif;
+  color: aliceblue;
+  border-radius: 15px;
+}
+button {
+  height: 50px;
+  width: 120px;
+  color: #b7c1eb;
+  font-size: 1.2em;
+  background: #24357a;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+/* footer */
+.footer {
+  height: 10vh;
+  margin: auto;
+  padding-bottom: 60px;
+  background: #080e16;
+}
+.footer .icon {
+  text-align: center;
+}
+.footer .icon a {
+  margin: 20px 5px;
+  color: #607adb;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #607adb;
+  border-radius: 100%;
+  width: 38px;
+  height: 38px;
+  line-height: 39px;
+  font-size: 1.4em;
+  transition: 0.4s;
+}
+.footer .icon a:hover {
+  color: #050a1b;
+  background-color: #b7c1eb;
+}
+.footer .text {
+  color: #b7c1eb;
+  text-align: center;
+}
+/* responsive tablet mode */
+@media screen and (max-width: 1200px) {
+  .contact-me .colom .row-contact {
+    margin: 20px 180px 20px 180px;
+  }
+}
+@media screen and (max-width: 990px) {
+  nav ul {
+    width: 50%;
+  }
+  .about .row {
+    display: block;
+    margin: 15px;
+  }
+  .contact-me .colom .row-contact {
+    margin: 20px 100px 20px 100px;
+  }
+  .row-contact {
+    flex-wrap: wrap;
+  }
+  .row-contact .map {
+    height: 30rem;
+  }
+  .row-contact form {
+    padding-bottom: 10px;
+  }
+}
+/* mobile mode */
+@media screen and (max-width: 620px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 78vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+    background: linear-gradient(to bottom right, #03001c, #04162b);
+    transform: translateX(100%);
+    transition: all 0.6s;
+    opacity: 0;
+  }
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .about .row {
+    display: block;
+    margin: 15px;
+  }
+  .contact-me .colom .row-contact {
+    margin: 20px 35px 20px 35px;
+  }
+  .row-contact form .input input {
+    height: 40px;
+    padding: 2px;
+    font-size: 1rem;
+  }
+  .row-contact form .input textarea {
+    padding: 5px;
+    font-size: 1rem;
+  }
+}
