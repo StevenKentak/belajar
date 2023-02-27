@@ -11,7 +11,7 @@ menuToggle.addEventListener("click", function () {
 const burger = document.querySelector(".menu-toggle input");
 
 document.addEventListener("click", function (e) {
-  if (!burger.contains(e.target)) {
+  if (!burger.contains(e.target) && !nav.contains(e.target)) {
     nav.classList.remove("slide");
   }
 });
