@@ -179,6 +179,9 @@ nav ul li a:hover {
 .about .row .col2 {
   color: #b7c1eb;
 }
+span {
+  color: white;
+}
 /* portfolio */
 
 .project {
